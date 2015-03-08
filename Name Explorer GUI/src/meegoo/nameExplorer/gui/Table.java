@@ -36,7 +36,7 @@ public class Table {
 
 
     static void drawMainOutput() {
-        if (isMainTableVisible == false) {
+        if (!isMainTableVisible) {
             frame.setSize(500,470);
             frame.getContentPane().add(scrollPane_table_output_main);
             isMainTableVisible = true;
@@ -46,7 +46,7 @@ public class Table {
 
     static void hideMainOutput() {
         hideAdditionalOutput();
-        if (isMainTableVisible == true) {
+        if (isMainTableVisible) {
             frame.setSize(500, 160);
             frame.remove(scrollPane_table_output_main);
             frame.setVisible(true);
@@ -56,8 +56,8 @@ public class Table {
     }
 
     static void drawAdditionalOutput() {
-        if (isAdditionalTableVisible == false && isMainTableVisible == true) {
-            frame.setSize(800,470);
+        if (!isAdditionalTableVisible && isMainTableVisible) {
+            frame.setSize(810,470);
             frame.getContentPane().add(separator);
             frame.getContentPane().add(scrollPane_table_output_additional);
         }
@@ -65,7 +65,7 @@ public class Table {
 
     }
     static void hideAdditionalOutput() {
-        if (isAdditionalTableVisible == true && isMainTableVisible == true) {
+        if (isAdditionalTableVisible && isMainTableVisible) {
             frame.setSize(500, 470);
             frame.remove(scrollPane_table_output_additional);
             frame.remove(separator);
@@ -75,7 +75,7 @@ public class Table {
     }
 
     static void updateMainTable(List<Player> players) {
-        currentUUIDS = new CustomList<UUID>();
+        currentUUIDS = new CustomList<>();
         data_main = new Object [players.size()][3];
         int i=0;
         for (Player player : players) {
@@ -91,7 +91,7 @@ public class Table {
     }
 
     static void updateMainTable(Player player) {
-        currentUUIDS = new CustomList<UUID>();
+        currentUUIDS = new CustomList<>();
         data_main = new Object [1][3];
         currentUUIDS.add(player.getUUID());
         data_main[0][0] = player.get(Player.NAME, 0).toString();
