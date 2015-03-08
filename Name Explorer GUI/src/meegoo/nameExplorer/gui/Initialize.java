@@ -53,7 +53,7 @@ public class Initialize {
 
         scrollPane_table_output_additional = new JScrollPane(table_output_additional);
         table_output_additional.setFillsViewportHeight(true);
-        scrollPane_table_output_additional.setBounds(496, 10, 300, 420);
+        scrollPane_table_output_additional.setBounds(496, 10, 310, 420);
         table_output_additional.getColumnModel().getColumn(0).setPreferredWidth(200);
         table_output_additional.getColumnModel().getColumn(1).setPreferredWidth(290);
         table_output_additional.getTableHeader().setReorderingAllowed(false);

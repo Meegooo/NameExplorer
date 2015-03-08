@@ -57,7 +57,7 @@ public class Table {
 
     static void drawAdditionalOutput() {
         if (!isAdditionalTableVisible && isMainTableVisible) {
-            frame.setSize(810,470);
+            frame.setSize(820,470);
             frame.getContentPane().add(separator);
             frame.getContentPane().add(scrollPane_table_output_additional);
         }
