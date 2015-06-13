@@ -38,13 +38,13 @@ public class TimeHelper {
     public static String getDayStringFromInt(int dayInt) {
         switch (dayInt){
 
-            case 0:  dayStringFromInt = "Monday"; break;
-            case 1:  dayStringFromInt = "Tuesday"; break;
-            case 2:  dayStringFromInt = "Wednesday"; break;
-            case 3:  dayStringFromInt = "Thursday"; break;
-            case 4:  dayStringFromInt = "Friday"; break;
-            case 5:  dayStringFromInt = "Saturday"; break;
-            case 6:  dayStringFromInt = "Sunday"; break;
+            case 2:  dayStringFromInt = "Monday"; break;
+            case 3:  dayStringFromInt = "Tuesday"; break;
+            case 4:  dayStringFromInt = "Wednesday"; break;
+            case 5:  dayStringFromInt = "Thursday"; break;
+            case 6:  dayStringFromInt = "Friday"; break;
+            case 7:  dayStringFromInt = "Saturday"; break;
+            case 1:  dayStringFromInt = "Sunday"; break;
 
         }
         return dayStringFromInt;
