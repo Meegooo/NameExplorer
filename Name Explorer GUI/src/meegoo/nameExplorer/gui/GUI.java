@@ -1,7 +1,6 @@
 package meegoo.nameExplorer.gui;
 
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
+import javax.swing.*;
 
 import static meegoo.nameExplorer.gui.GUIObjects.*;
 
@@ -28,6 +27,12 @@ public class GUI {
         Initialize.initPopupMenu();
         Initialize.initRadioButtons();
         EventHandler.initHandler();
+
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         
         frame.setVisible(true);
